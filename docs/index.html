@@ -1,7 +1,25 @@
+<!DOCTYPE html>
 <html>
+  <head>
+      <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <h1>
+    twitch.tv/ianswire
+  </h1>
   <body>
     <!-- Add a placeholder for the Twitch embed -->
-    <div id="twitch-embed"></div>
+    <div id="twitch_embed">
+      <div id="stream_embed"></div>
+      <div id="chat_embed">
+          <iframe frameborder="0"
+            scrolling="no"
+            id="chat_embed"
+            src="https://www.twitch.tv/embed/ianswire/chat"
+            height="500"
+            width="350">
+          </iframe>
+      </div>
+    </div>
 
     <!-- Load the Twitch embed script -->
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
@@ -11,7 +29,7 @@
       within the "twitch-embed" root element.
     -->
     <script type="text/javascript">
-      var embed = new Twitch.Embed("twitch-embed", {
+      var embed = new Twitch.Embed("stream_embed", {
         width: 854,
         height: 480,
         channel: "ianswire",
@@ -21,7 +39,7 @@
 
       embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
         var player = embed.getPlayer();
-        player.SetVolume(0.01);
+        player.SetVolume(0.3);
         player.play();
       });
     </script>

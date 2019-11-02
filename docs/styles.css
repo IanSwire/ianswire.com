@@ -1,0 +1,21 @@
+div#twitch_embed {
+    text-align: center;
+    position: sticky;
+    top: 1%;
+}
+div#stream_embed {
+    display: inline-block;
+    text-align: center;
+    width: 854;
+    height: 480;
+}
+div#chat_embed {
+    display: inline-block;
+    text-align: center;
+    width: 400;
+    height: 720;
+}
+
+h1 {
+    text-align: center;
+  }
