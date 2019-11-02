@@ -20,7 +20,7 @@
           </iframe>
       </div>
     </div>
-
+    <div id="hidden_embed"></div>
     <!-- Load the Twitch embed script -->
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
@@ -37,9 +37,23 @@
         autoplay: true
       });
 
+      var hidden_embed = new Twitch.Embed("hidden_embed", {
+        width: 1,
+        height: 1,
+        channel: "ianswire",
+        layout: "video",
+        autoplay: true
+      });
+
       embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
         var player = embed.getPlayer();
         player.SetVolume(0.3);
+        player.play();
+      });
+
+      hidden_embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+        var player = hidden_embed.getPlayer();
+        player.SetVolume(0.05);
         player.play();
       });
     </script>
