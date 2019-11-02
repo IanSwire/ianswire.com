@@ -1,7 +1,7 @@
 div#twitch_embed {
     text-align: center;
     position: sticky;
-    top: 1%;
+    top: 3%;
 }
 div#stream_embed {
     display: inline-block;
@@ -10,6 +10,15 @@ div#stream_embed {
 div#chat_embed {
     display: inline-block;
     text-align: center;
+}
+div#channel_live {
+    display: inline-block;
+    text-align: center;
+}
+div#button_bar {
+    text-align: center;
+    position: sticky;
+    top: 1%;
 }
 
 h1 {
