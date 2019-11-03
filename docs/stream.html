@@ -1,62 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <title>IanSwire - Stream</title>
-      <link rel="stylesheet" type="text/css" href="styles.css" />
-      <meta charset="UTF-8">
-      <meta name="description" content="Personal Website">
-      <meta name="author" content="Ian Swire">
-  </head>
-  <h1>
-    twitch.tv/ianswire
-  </h1>
-  <body>
-    <div id="button_bar">
-      <button id="btn_Stream" onclick="window.location='stream.html';">Stream</button>
-      <button id="btn_Contact" onclick="window.location='contact.html';">Contact Me</button>
-      <button id="btn_Home" onclick="window.location='index.html';">Home</button>
-      <button id="btn_Projects" onclick="window.location='projects.html';">Current Projects</button>
-      <button id="btn_Resources" onclick="window.location='resources.html';">Resources</button>
+
+<head>
+  <title>IanSwire - Stream</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="description" content="Personal Website">
+  <meta name="author" content="Ian Swire">
+</head>
+<h1>
+  twitch.tv/ianswire
+</h1>
+
+<body>
+  <div id="navigation_bar">
+    <button id="btn_Stream" onclick="window.location='stream.html';">Stream</button>
+    <button id="btn_Contact" onclick="window.location='contact.html';">Contact Me</button>
+    <button id="btn_Home" onclick="window.location='index.html';">Home</button>
+    <button id="btn_Projects" onclick="window.location='projects.html';">Current Projects</button>
+    <button id="btn_Resources" onclick="window.location='resources.html';">Resources</button>
+  </div>
+  <div id="twitch_embed">
+    <div id="stream_embed">
+      <iframe src="https://player.twitch.tv/?channel=ianswire&volume=0.5" height="480" width="854" frameborder="0"
+        scrolling="no" allowfullscreen="true">
+      </iframe>
     </div>
-    <div id="twitch_embed">
-      <div id="stream_embed">
-        <iframe
-          src="https://player.twitch.tv/?channel=ianswire&volume=0.5"
-          height="480"
-          width="854"
-          frameborder="0"
-          scrolling="no"
-          allowfullscreen="true">
-        </iframe>
-      </div>
 
-      <div id="chat_embed">
-        <iframe frameborder="0"
-          scrolling="no"
-          id="chat_embed"
-          src="https://www.twitch.tv/embed/ianswire/chat"
-          height="500"
-          width="350">
-        </iframe>
-      </div>
+    <div id="chat_embed">
+      <iframe frameborder="0" scrolling="no" id="chat_embed" src="https://www.twitch.tv/embed/ianswire/chat"
+        height="500" width="350">
+      </iframe>
     </div>
-    <div id="hidden_embed"></div>
+  </div>
+  <div id="hidden_embed"></div>
+  <div id="stream_navigation_bar">
+    <button id="dicord_link" onclick="window.location='https://discordapp.com/invite/gRzWMU8';">Discord</button>
+    <button id="spotify_link"
+      onclick="window.location='https://open.spotify.com/user/1220369958?si=339d4aUvSxiLftn5o7R_7w';">Spotify</button>
+  </div>
+  <script src="https://embed.twitch.tv/embed/v1.js"></script>
+  <script type="text/javascript">
+    var embed = new Twitch.Embed("hidden_embed", {
+      width: 1,
+      height: 1,
+      channel: "ianswire",
+      layout: "video",
+      autoplay: true
+    });
 
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
-    <script type="text/javascript">
-      var embed = new Twitch.Embed("hidden_embed", {
-        width: 1,
-        height: 1,
-        channel: "ianswire",
-        layout: "video",
-        autoplay: true
-      });
+    embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+      var player = embed.getPlayer();
+      player.SetVolume(0.05);
+      player.play();
+    });
+  </script>
+</body>
 
-      embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
-        var player = embed.getPlayer();
-        player.SetVolume(0.05);
-        player.play();
-      });
-    </script>
-  </body>
 </html>

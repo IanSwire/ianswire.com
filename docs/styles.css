@@ -15,7 +15,7 @@ div#channel_live {
     display: inline-block;
     text-align: center;
 }
-div#button_bar {
+div#navigation_bar {
     text-align: center;
     position: sticky;
     top: 1%;
@@ -23,6 +23,28 @@ div#button_bar {
 div#project_ORCMS {
     width: 45%;
     background-color: lightcoral;
+}
+div#stream_navigation_bar{
+    text-align: center;
+}
+div#project_data{
+    display: inline-block;
+}
+div#resource_selection{
+    padding-top: 15px;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 25px 50px;
+}
+
+#project_data_key{
+    display: inline-block;
+}
+#project_data_value{
+    display: inline-block;
 }
 
 h1 {

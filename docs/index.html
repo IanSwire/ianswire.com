@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>IanSwire - Home</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <meta charset="UTF-8">
-    <meta name="description" content="Personal Website">
-    <meta name="author" content="Ian Swire">
-  </head>
 
-  <body>
-    <div id="button_bar">
-      <button id="btn_Stream" onclick="window.location='stream.html';">Stream</button>
-      <button id="btn_Contact" onclick="window.location='contact.html';">Contact Me</button>
-      <button id="btn_Home" onclick="window.location='index.html';">Home</button>
-      <button id="btn_Projects" onclick="window.location='projects.html';">Current Projects</button>
-      <button id="btn_Resources" onclick="window.location='resources.html';">Resources</button>
-    </div>
-    <div id="channel_live"></div>
+<head>
+  <title>IanSwire - Home</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="description" content="Personal Website">
+  <meta name="author" content="Ian Swire">
+</head>
 
-    <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
-    <script type="text/javascript">
-      document.getElementById("channel_live").style.visibility = "hidden";
-      var player = new Twitch.Player("channel_live", {
-        width: 854,
-        height: 480,
-        channel: "ianswire"
-      });
+<body>
+  <div id="navigation_bar">
+    <button id="btn_Stream" onclick="window.location='stream.html';">Stream</button>
+    <button id="btn_Contact" onclick="window.location='contact.html';">Contact Me</button>
+    <button id="btn_Home" onclick="window.location='index.html';">Home</button>
+    <button id="btn_Projects" onclick="window.location='projects.html';">Current Projects</button>
+    <button id="btn_Resources" onclick="window.location='resources.html';">Resources</button>
+  </div>
+  <div id="channel_live"></div>
 
-      var hidden_player = new Twitch.Player("channel_live", {
-        width: 1,
-        height: 1,
-        channel: "ianswire"
-      });
+  <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+  <script type="text/javascript">
+    document.getElementById("channel_live").style.visibility = "hidden";
+    var player = new Twitch.Player("channel_live", {
+      width: 854,
+      height: 480,
+      channel: "ianswire"
+    });
 
-      player.addEventListener(Twitch.Player.ONLINE, () => {
-        document.getElementById("channel_live").style.visibility = "visible";
-        player.SetVolume(0.5);
-        hidden_player.SetVolume(0.05);
-        player.play();
-        hidden_player.play();
-      });
-    </script>
-  </body>
+    var hidden_player = new Twitch.Player("channel_live", {
+      width: 1,
+      height: 1,
+      channel: "ianswire"
+    });
+
+    player.addEventListener(Twitch.Player.ONLINE, () => {
+      document.getElementById("channel_live").style.visibility = "visible";
+      player.SetVolume(0.5);
+      hidden_player.SetVolume(0.05);
+      player.play();
+      hidden_player.play();
+    });
+  </script>
+</body>
+
 </html>
