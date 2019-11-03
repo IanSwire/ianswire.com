@@ -20,6 +20,10 @@ div#button_bar {
     position: sticky;
     top: 1%;
 }
+div#project_ORCMS {
+    width: 45%;
+    background-color: lightcoral;
+}
 
 h1 {
     text-align: center;
