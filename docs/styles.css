@@ -39,6 +39,9 @@ div#resource_selection{
     grid-template-columns: 30% 30% 30%;
     grid-gap: 25px 50px;
 }
+div#projects {
+    margin-top: 25px;
+}
 
 #project_data_key{
     display: inline-block;
@@ -50,3 +53,37 @@ div#resource_selection{
 h1 {
     text-align: center;
   }
+body {
+    width: 1280px;
+    margin-left: -640px;
+    padding-left: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+.tab button:hover {
+  background-color: #ddd;
+}
+.tab button.active {
+  background-color: #ccc;
+}
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}

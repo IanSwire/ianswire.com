@@ -28,10 +28,27 @@
     </div>
 
     <div id="chat_embed">
-      <iframe frameborder="0" scrolling="no" id="chat_embed" src="https://www.twitch.tv/embed/ianswire/chat"
-        height="500" width="350">
-      </iframe>
+      <div class="tab">
+        <button class="tablinks" onclick="openChat(event, 'twitch_chat')" id="defaultOpen">Twitch Chat</button>
+        <button class="tablinks" onclick="openChat(event, 'discord_chat')">Discord Chat</button>
+      </div>
+
+      <div id="twitch_chat" class="tabcontent">
+        <div id="twitch_chat_feed">
+          <iframe frameborder="0" scrolling="no" id="chat_embed" src="https://www.twitch.tv/embed/ianswire/chat"
+            height="500" width="350">
+          </iframe>
+        </div>
+      </div>
+
+      <div id="discord_chat" class="tabcontent">
+        <div id="discord_chat_feed">
+          <iframe src="https://titanembeds.com/embed/431251712683278356?defaultchannel=641289553751048211" height="500"
+            width="350" frameborder="0"></iframe>
+        </div>
+      </div>
     </div>
+
   </div>
   <div id="hidden_embed"></div>
   <div id="stream_navigation_bar">
@@ -39,6 +56,26 @@
     <button id="spotify_link"
       onclick="window.location='https://open.spotify.com/user/1220369958?si=339d4aUvSxiLftn5o7R_7w';">Spotify</button>
   </div>
+
+  <script type="text/javascript">
+    function openChat(evt, chatName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].chatName = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(chatName).style.display = "block";
+      evt.currentTarget.chatName += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+
   <script src="https://embed.twitch.tv/embed/v1.js"></script>
   <script type="text/javascript">
     var embed = new Twitch.Embed("hidden_embed", {
