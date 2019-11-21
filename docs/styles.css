@@ -55,15 +55,22 @@ h1 {
   }
 body {
     width: 1280px;
-    margin-left: -640px;
-    padding-left: 50%;
+    margin: auto;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: burlywood;
+}
+html {
+    background-color: aquamarine;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
 }
 
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  background-color: white;
 }
 .tab button {
   background-color: inherit;
@@ -86,4 +93,5 @@ body {
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
+  background-color: white;
 }
