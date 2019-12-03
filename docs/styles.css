@@ -20,8 +20,8 @@ div#navigation_bar {
     position: sticky;
     top: 1%;
 }
-div#project_ORCMS {
-    width: 45%;
+div#project_container {
+    width: 90%;
     background-color: lightcoral;
 }
 div#stream_navigation_bar{
@@ -40,7 +40,10 @@ div#resource_selection{
     grid-gap: 25px 50px;
 }
 div#projects {
-    margin-top: 25px;
+    align-content: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #2196F3;
 }
 
 #project_data_key{
