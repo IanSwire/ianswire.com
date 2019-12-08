@@ -26,7 +26,7 @@ div#header_link_bar{
 }
 
 div#stream{
-    background-color: lightskyblue;;
+    background-color: lightskyblue;
     margin: auto;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -56,7 +56,17 @@ div#footer_link_bar{
 
 body{
     background-color: cadetblue;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 button{
     padding: 3px;
+}
+
+.project{
+    padding: 5px;
+    background-color: lightskyblue;
+    border: rgb(86, 130, 148);
+    border-style: solid;
+    border-radius: 6px;
 }
