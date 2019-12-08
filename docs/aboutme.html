@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>About Me - IanSwire.com</title>
+    <meta name="description" content="Personal Website">
+    <meta name="keywords" content="games,videogames,stream,streaming,livestream,livestreaming,indie,indiedeveloper,unity,blender,twitch,software,softwaredevelopment">
+    <meta name="author" content="ian@ianswire.com">
+    <meta name="viewport" content="width=1920px, initial-scale=1.0">
+    <script data-ad-client="ca-pub-8334560246929909" async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+  </head>
+  <body>
+    <div id="left_content">
+
+    </div>
+    <div id="content">
+      <div id="page_header">
+        <div id="header_page_navigation" style="width: 290px;">
+          <button onclick="window.location='index.html';">Home</button>
+          <button onclick="window.location='projects.html';">Projects</button>
+          <button onclick="window.location='https://www.paypal.me/ianswire';">Donate</button>
+          <button onclick="window.location='aboutme.html';">About Me</button>
+        </div>
+        <div id="header_link_bar">
+            <button onclick="window.location='https://discordapp.com/invite/gRzWMU8';">Discord</button>
+            <button onclick="window.location='https://open.spotify.com/user/1220369958?si=339d4aUvSxiLftn5o7R_7w';">Spotify</button>
+            <button onclick="window.location='https://github.com/IanSwire';">Github</button>
+            <button onclick="window.location='https://www.twitch.tv/ianswire';">Twitch</button>
+            <button onclick="window.location='https://www.youtube.com/channel/UCqqni2QJ5_DLNKFfAGgo6_Q';">Youtube</button>
+        </div>
+      </div>
+      <div id="page_footer">
+        <div id="footer_link_bar">
+          <button onclick="window.location='https://discordapp.com/invite/gRzWMU8';">Discord</button>
+          <button onclick="window.location='https://open.spotify.com/user/1220369958?si=339d4aUvSxiLftn5o7R_7w';">Spotify</button>
+          <button onclick="window.location='https://github.com/IanSwire';">Github</button>
+          <button onclick="window.location='https://www.twitch.tv/ianswire';">Twitch</button>
+          <button onclick="window.location='https://www.youtube.com/channel/UCqqni2QJ5_DLNKFfAGgo6_Q';">Youtube</button>
+          <div id="channel_video"></div>
+        </div>
+        <div id="footer_contact_bar">
+          <p>If something seems to be wrong, please contact support@ianswire.com</p>
+        </div>
+      </div>
+    </div>
+    <div id="right_content">
+
+    </div>
+
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <script type="text/javascript">
+      var embed = new Twitch.Embed("channel_video", {
+        width: 1,
+        height: 1,
+        channel: "ianswire",
+        layout: "video",
+        autoplay: true
+      });
+      var h_embed = new Twitch.Embed("channel_video", {
+        width: 1,
+        height: 1,
+        channel: "ianswire",
+        layout: "video",
+        autoplay: true
+      });
+
+      embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+        var player = embed.getPlayer();
+        player.SetVolume(0.05);
+        player.play();
+        var h_player = h_embed.getPlayer();
+        h_player.SetVolume(0.05);
+        h_player.play();
+      });
+    </script>
+  </body>
+</html>

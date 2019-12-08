@@ -55,25 +55,30 @@
 
     </div>
 
-    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
     <script type="text/javascript">
-      var player = new Twitch.Player("channel_video", {
+      var embed = new Twitch.Embed("channel_video", {
         width: 854,
         height: 480,
-        channel: "ianswire"
+        channel: "ianswire",
+        layout: "video",
+        autoplay: true
       });
-  
-      var hidden_player = new Twitch.Player("channel_video", {
+      var h_embed = new Twitch.Embed("channel_video", {
         width: 1,
         height: 1,
-        channel: "ianswire"
+        channel: "ianswire",
+        layout: "video",
+        autoplay: true
       });
-  
-      player.addEventListener(Twitch.Player.ONLINE, () => {
+
+      embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+        var player = embed.getPlayer();
         player.SetVolume(0.5);
-        hidden_player.SetVolume(0.05);
         player.play();
-        hidden_player.play();
+        var h_player = h_embed.getPlayer();
+        h_player.SetVolume(0.05);
+        h_player.play();
       });
     </script>
   </body>
