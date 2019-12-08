@@ -1,100 +1,62 @@
-div#twitch_embed {
-    text-align: center;
-    position: sticky;
-    top: 3%;
-}
-div#stream_embed {
-    display: inline-block;
-    text-align: center;
-}
-div#chat_embed {
-    display: inline-block;
-    text-align: center;
-}
-div#channel_live {
-    display: inline-block;
-    text-align: center;
-}
-div#navigation_bar {
-    text-align: center;
-    position: sticky;
-    top: 1%;
-}
-div#project_container {
-    width: 90%;
-    background-color: lightcoral;
-}
-div#stream_navigation_bar{
-    text-align: center;
-}
-div#project_data{
-    display: inline-block;
-}
-div#resource_selection{
-    padding-top: 15px;
-    padding-left: 5%;
-    padding-right: 5%;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-gap: 25px 50px;
-}
-div#projects {
-    align-content: center;
-    display: grid;
-    grid-template-columns: auto auto;
-    background-color: #2196F3;
-}
-
-#project_data_key{
-    display: inline-block;
-}
-#project_data_value{
-    display: inline-block;
-}
-
-h1 {
-    text-align: center;
-  }
-body {
+div#content{
     width: 1280px;
     margin: auto;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: burlywood;
-}
-html {
-    background-color: aquamarine;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
 }
 
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: white;
+div#page_header{
+    text-align: center;
+    background-color: rgb(139, 226, 153);
+    height: auto;
+    border: rgb(80, 131, 80);
+    border-style: solid;
+    border-radius: 3px;
+    position: sticky;
+    padding: 4px;
 }
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
+div#header_page_navigation{
+    padding: 8px;
+    padding-left: 5px;
+    display: inline;
+    margin-right: 660px;
 }
-.tab button:hover {
-  background-color: #ddd;
+div#header_link_bar{
+    padding: 8px;
+    padding-right: 5px;
+    display: inline;
 }
-.tab button.active {
-  background-color: #ccc;
+
+div#stream{
+    background-color: lightskyblue;;
+    margin: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    border: rgb(86, 130, 148);
+    border-style: solid;
+    border-radius: 6px;
 }
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-  background-color: white;
+div#channel_video{
+    display: inline;
+}
+div#channel_chat{
+    display: inline;
+    margin-left: 25px;
+}
+
+div#page_footer{
+    text-align: center;
+    background-color: rgb(139, 226, 153);
+    border: rgb(80, 131, 80);
+    border-style: solid;
+    border-radius: 3px;
+}
+div#footer_link_bar{
+    display: inline;
+}
+
+body{
+    background-color: cadetblue;
+}
+button{
+    padding: 3px;
 }
