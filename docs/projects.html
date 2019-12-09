@@ -38,7 +38,7 @@
     </div>
 
     <div id="project_GladiatorsOfAlnor" class="project">
-      <h1><u>Gladiators of Alnor</u> | Status: In Development</h1>
+      <h1>Gladiators of Alnor | Status: In Development</h1>
       <h2>Description</h2>
       <p>Hidden away in a world long forgotten live the people of Alnor. The wickedness once terrorized the land until
         brave heros trapped it in the Tower of Unreasonable height. To celebrate the event, new heros travel into the
@@ -49,7 +49,7 @@
     </div>
 
     <div id="project_CrazyRacers" class="project">
-      <h1><u>Crazy Racers</u> | Status: In Development</h1>
+      <h1>Crazy Racers | Status: In Development</h1>
       <h2>Description</h2>
       <p>It looks like the race is in town! Travel to different cities and locations to race in all types of racing. Do
         you want to drive a car? Got that. Do you want to ride a horse? Got that. What about a winged raptor with 3
@@ -59,7 +59,7 @@
     </div>
 
     <div id="project_ORCMS" class="project">
-      <h1><u>Open Review Confrence Management Software</u> | Status: Pre-Alpha</h1>
+      <h1>Open Review Confrence Management Software | Status: Pre-Alpha</h1>
       <h2>Description</h2>
       <p>Conference management and creation tool for assistance in running and operation of open review conferences.
         Automatically conference schedule with post creation manual edits. Automatically assing papers to reviewers
@@ -71,7 +71,37 @@
     </div>
 
     <div id="project_BlenderCreations" class="project">
-      <h1><u>Blender Creations</u></h1>
+      <h1>Blender Creations</h1>
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="resources/filler.jpg" style="width:100%">
+          <div class="text">Demo Caption Text</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="resources/filler.jpg" style="width:100%">
+          <div class="text">Demo Caption Two</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="resources/filler.jpg" style="width:100%">
+          <div class="text">Demo Caption Three</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      </div>
+      <br>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
     </div>
 
     <div id="page_footer">
@@ -116,6 +146,55 @@
         h_player.SetVolume(0.05);
         h_player.play();
       });
+    </script>
+    <!--<script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 10000); // Change image every 10 seconds
+      }
+    </script>-->
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
     </script>
 </body>
 
