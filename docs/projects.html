@@ -18,6 +18,7 @@
   <div id="left_content">
 
   </div>
+
   <div id="content">
     <div id="page_header">
       <div id="header_page_navigation">
@@ -117,85 +118,67 @@
         <p>If something seems to be wrong, please contact support@ianswire.com</p>
       </div>
     </div>
-    <div id="right_content">
+  </div>
+  <div id="right_content">
 
-    </div>
+  </div>
 
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
-    <script type="text/javascript">
-      var embed = new Twitch.Embed("channel_video", {
-        width: 1,
-        height: 1,
-        channel: "ianswire",
-        layout: "video",
-        autoplay: true
-      });
-      var h_embed = new Twitch.Embed("channel_video", {
-        width: 1,
-        height: 1,
-        channel: "ianswire",
-        layout: "video",
-        autoplay: true
-      });
+  <script src="https://embed.twitch.tv/embed/v1.js"></script>
+  <script type="text/javascript">
+    var embed = new Twitch.Embed("channel_video", {
+      width: 1,
+      height: 1,
+      channel: "ianswire",
+      layout: "video",
+      autoplay: true
+    });
+    var h_embed = new Twitch.Embed("channel_video", {
+      width: 1,
+      height: 1,
+      channel: "ianswire",
+      layout: "video",
+      autoplay: true
+    });
 
-      embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
-        var player = embed.getPlayer();
-        player.SetVolume(0.05);
-        player.play();
-        var h_player = h_embed.getPlayer();
-        h_player.SetVolume(0.05);
-        h_player.play();
-      });
-    </script>
-    <!--<script>
-      var slideIndex = 0;
-      showSlides();
+    embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+      var player = embed.getPlayer();
+      player.SetVolume(0.05);
+      player.play();
+      var h_player = h_embed.getPlayer();
+      h_player.SetVolume(0.05);
+      h_player.play();
+    });
+  </script>
+  <script>
+    var slideIndex = 1;
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    showSlides(1);
 
-      function showSlides() {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) { slideIndex = 1 }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        setTimeout(showSlides, 10000); // Change image every 10 seconds
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
       }
-    </script>-->
-    <script>
-      var slideIndex = 1;
-      showSlides(slideIndex);
-
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
       }
 
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-      }
-    </script>
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
 </body>
 
 </html>
