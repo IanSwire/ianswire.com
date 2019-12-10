@@ -48,13 +48,14 @@ div#channel_chat{
     display: inline;
     margin-left: 25px;
 }
+div#boards{
+    display: flex;
+}
 div#news_board{
   width: 740px;
-  display: inline-block;
 }
 div#highlight_board{
   width: 505px;
-  display: inline-block;
 }
 
 div#page_footer{
