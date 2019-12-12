@@ -51,39 +51,26 @@
         <div class="slideshow-container">
 
           <div class="mySlides fade">
-            <div class="numbertext">1 / 6</div>
-            <img src="resources/filler.jpg" style="height:100px; width: 100%;">
-            <div class="text">Demo Caption Text</div>
+            <div class="numbertext">1 / 2</div>
+            <img src="resources/filler.jpg" class="news_slide_img">
+            <div class="slide_title"><u>Winter Break Stream Schedule</u></div>
+            <div class="slide_content">I have decided on a stream schedule. We will try to stream 5 - 6 days a week.
+              Tuesday through Saturday will each have atleast one four hour stream. Three streams a week will be
+              creative where we will work on creating content and base functionality for my game design class, Gladitors
+              of Alnor. The other days will probably include either League, Call of Duty, or Mario Kart.</div>
           </div>
 
           <div class="mySlides fade">
-            <div class="numbertext">2 / 6</div>
-            <img src="resources/filler.jpg" style="height:100px; width: 100%;">
-            <div class="text">Demo Caption Two</div>
-          </div>
-
-          <div class="mySlides fade">
-            <div class="numbertext">3 / 6</div>
-            <img src="resources/filler.jpg" style="height:100px; width: 100%;">
-            <div class="text">Demo Caption Three</div>
-          </div>
-
-          <div class="mySlides fade">
-            <div class="numbertext">4 / 6</div>
-            <img src="resources/filler.jpg" style="height:100px; width: 100%;">
-            <div class="text">Demo Caption Four</div>
-          </div>
-
-          <div class="mySlides fade">
-            <div class="numbertext">5 / 6</div>
-            <img src="resources/filler.jpg" style="height:100px; width: 100%;">
-            <div class="text">Demo Caption Five</div>
-          </div>
-
-          <div class="mySlides fade">
-            <div class="numbertext">6 / 6</div>
-            <img src="resources/filler.jpg" style="height:100px; width: 100%;">
-            <div class="text">Demo Caption Six</div>
+            <div class="numbertext">2 / 2</div>
+            <img src="resources/filler.jpg" class="news_slide_img">
+            <div class="slide_title"><u>Website Makeover</u></div>
+            <div class="slide_content">The website has been totally redone supporting a new demo layout. These changes
+              impove the overall quality of the website by making content easy to find. The home page is re-worked and
+              will be the main hub for my stream and content creation. The projects tab will provide all content
+              relating to anything I am working on with link to any open project files. THe about me page will feature a
+              robust detail about my professional carrer and server more as a templet for my resume then anything else.
+              I hope you enjoy these changes and please feel free to email support@ianswire.com with any ideas you may
+              have!</div>
           </div>
 
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -94,10 +81,6 @@
         <div style="text-align:center">
           <span class="dot" onclick="currentSlide(1)"></span>
           <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-          <span class="dot" onclick="currentSlide(4)"></span>
-          <span class="dot" onclick="currentSlide(5)"></span>
-          <span class="dot" onclick="currentSlide(6)"></span>
         </div>
       </div>
       <div id="highlight_board" class="project">
@@ -105,21 +88,23 @@
         <div class="slideshow-container">
 
           <div class="mySlides2 fade">
-            <div class="numbertext">1 / 3</div>
-            <img src="resources/filler.jpg" style="height:100px; width: 100%;">
-            <div class="text">Demo Caption Text</div>
+            <div class="numbertext">1 / 2</div>
+            <img src="resources/filler.jpg" class="news_slide_img"
+              onclick="window.location='https://www.twitch.tv/tadmozeltov';">
+            <div class="text">TadMozelTov</div>
+            <div class="highlight_content">
+              <ul>
+                <li>Best Moderator</li>
+                <li>Very Knowledgeable</li>
+                <li>Super Friendly in chat</li>
+                <li>Great Friend</li>
+              </ul>
+            </div>
           </div>
-
           <div class="mySlides2 fade">
-            <div class="numbertext">2 / 3</div>
-            <img src="resources/filler.jpg" style="height:100px; width: 100%;">
-            <div class="text">Demo Caption Two</div>
-          </div>
-
-          <div class="mySlides2 fade">
-            <div class="numbertext">3 / 3</div>
-            <img src="resources/filler.jpg" style="height:100px; width: 100%;">
-            <div class="text">Demo Caption Three</div>
+            <div class="numbertext">2 / 2</div>
+            <img src="resources/filler.jpg" class="news_slide_img">
+            <div class="text">Gladitors of Alnor</div>
           </div>
 
           <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
@@ -130,7 +115,6 @@
         <div style="text-align:center">
           <span class="dot2" onclick="currentSlide2(1)"></span>
           <span class="dot2" onclick="currentSlide2(2)"></span>
-          <span class="dot2" onclick="currentSlide2(3)"></span>
         </div>
       </div>
     </div>
@@ -182,7 +166,6 @@
   </script>
   <script>
     var slideIndex = 1;
-    var i;
     var slides = document.getElementsByClassName("mySlides");
     var dots = document.getElementsByClassName("dot");
     showSlides(1);
@@ -199,45 +182,43 @@
       if (n > slides.length) { slideIndex = 1 }
       if (n < 1) { slideIndex = slides.length }
 
-      for (i = 0; i < slides.length; i++) {
+      for (var i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
       }
-      for (i = 0; i < dots.length; i++) {
+      for (var i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
       }
 
       slides[slideIndex - 1].style.display = "block";
       dots[slideIndex - 1].className += " active";
     }
-  </script>
-  <script>
-    var slideIndex = 1;
-    var i;
-    var slides = document.getElementsByClassName("mySlides2");
-    var dots = document.getElementsByClassName("dot2");
+
+    var slideIndex2 = 1;
+    var slides2 = document.getElementsByClassName("mySlides2");
+    var dots2 = document.getElementsByClassName("dot2");
     showSlides2(1);
 
     function plusSlides2(n) {
-      showSlides2(slideIndex += n);
+      showSlides2(slideIndex2 += n);
     }
 
     function currentSlide2(n) {
-      showSlides2(slideIndex = n);
+      showSlides2(slideIndex2 = n);
     }
 
     function showSlides2(n) {
-      if (n > slides.length) { slideIndex = 1 }
-      if (n < 1) { slideIndex = slides.length }
+      if (n > slides2.length) { slideIndex2 = 1 }
+      if (n < 1) { slideIndex2 = slides2.length }
 
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+      for (var i = 0; i < slides2.length; i++) {
+        slides2[i].style.display = "none";
       }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+      for (var i = 0; i < dots2.length; i++) {
+        dots2[i].className = dots2[i].className.replace(" active", "");
       }
 
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
+      slides2[slideIndex2 - 1].style.display = "block";
+      dots2[slideIndex2 - 1].className += " active";
     }
   </script>
 </body>

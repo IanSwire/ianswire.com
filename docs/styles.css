@@ -80,6 +80,46 @@ button{
     padding: 3px;
 }
 
+
+.slide_title{
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 10px;;
+  width: 100%;
+  text-align: center;
+}
+
+.slide_content{
+  color: #f2f2f2;
+  font-size: 15px;
+  max-height: 150px;
+  position: absolute;
+  width: 90%;
+  top: 50px;
+  left: 5%;
+  text-align: left;
+  overflow: hidden;
+}
+
+.highlight_content{
+  color: #f2f2f2;
+  font-size: 15px;
+  max-height: 150px;
+  position: absolute;
+  width: 90%;
+  top: 30px;
+  left: 5%;
+  text-align: left;
+  overflow: hidden;
+}
+
+.news_slide_img{
+  height: 175px;
+  width: 100%;
+}
+
 .project{
     padding: 5px;
     background-color: lightskyblue;
