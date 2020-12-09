@@ -1,226 +1,139 @@
 <!DOCTYPE html>
 <html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+<body class="w3-light-grey">
 
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title>Home - IanSwire.com</title>
-  <meta name="description" content="Personal Website">
-  <meta name="keywords"
-    content="games,videogames,stream,streaming,livestream,livestreaming,indie,indiedeveloper,unity,blender,twitch,software,softwaredevelopment">
-  <meta name="author" content="ian@ianswire.com">
-  <meta name="viewport" content="width=1920px, initial-scale=1.0">
-  <script data-ad-client="ca-pub-8334560246929909" async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <link rel="stylesheet" type="text/css" href="styles.css" />
-</head>
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
 
-<body>
-  <div id="left_content">
-
-  </div>
-  <div id="content">
-    <div id="page_header">
-      <div id="header_page_navigation">
-        <button onclick="window.location='index.html';">Home</button>
-        <button onclick="window.location='projects.html';">Projects</button>
-        <button onclick="window.location='https://www.paypal.me/ianswire';">Donate</button>
-        <button onclick="window.location='aboutme.html';">About Me</button>
-      </div>
-      <div id="header_link_bar">
-        <button onclick="window.location='https://discordapp.com/invite/gRzWMU8';">Discord</button>
-        <button
-          onclick="window.location='https://open.spotify.com/user/1220369958?si=339d4aUvSxiLftn5o7R_7w';">Spotify</button>
-        <button onclick="window.location='https://github.com/IanSwire';">Github</button>
-        <button onclick="window.location='https://www.twitch.tv/ianswire';">Twitch</button>
-        <button onclick="window.location='https://www.youtube.com/channel/UCqqni2QJ5_DLNKFfAGgo6_Q';">Youtube</button>
-      </div>
-    </div>
-
-    <div id="stream">
-      <div id="channel_video"></div>
-      <div id="channel_chat">
-        <iframe frameborder="0" scrolling="no" id="chat_embed" src="https://www.twitch.tv/embed/ianswire/chat"
-          height="500" width="350">
-        </iframe>
-      </div>
-    </div>
-
-    <div id="boards">
-      <div id="news_board" class="project">
-        <h1>News</h1>
-        <div class="slideshow-container">
-
-          <div class="mySlides fade">
-            <div class="numbertext">1 / 2</div>
-            <img src="resources/filler.jpg" class="news_slide_img">
-            <div class="slide_title"><u>Winter Break Stream Schedule</u></div>
-            <div class="slide_content">I have decided on a stream schedule. We will try to stream 5 - 6 days a week.
-              Tuesday through Saturday will each have atleast one four hour stream. Three streams a week will be
-              creative where we will work on creating content and base functionality for my game design class, Gladitors
-              of Alnor. The other days will probably include either League, Call of Duty, or Mario Kart.</div>
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="https://avatars1.githubusercontent.com/u/49881549?s=460&u=a551c218761184d282594a03a22bb9e7ed78e975&v=4" style="width:100%" alt="Avatar">
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+            <h2>Ian Swire</h2>
           </div>
+        </div>
+        <div class="w3-container">
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Graduate Research Assistant</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Melbourne FL, USA</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>ian@ianswire.com</p>
+          <hr>
 
-          <div class="mySlides fade">
-            <div class="numbertext">2 / 2</div>
-            <img src="resources/filler.jpg" class="news_slide_img">
-            <div class="slide_title"><u>Website Makeover</u></div>
-            <div class="slide_content">The website has been totally redone supporting a new demo layout. These changes
-              impove the overall quality of the website by making content easy to find. The home page is re-worked and
-              will be the main hub for my stream and content creation. The projects tab will provide all content
-              relating to anything I am working on with link to any open project files. THe about me page will feature a
-              robust detail about my professional carrer and server more as a templet for my resume then anything else.
-              I hope you enjoy these changes and please feel free to email support@ianswire.com with any ideas you may
-              have!</div>
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+          <p>Gamification Design and Development</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:95%">95%</div>
           </div>
-
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-        </div>
-        <br>
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-        </div>
-      </div>
-      <div id="highlight_board" class="project">
-        <h1>Highlights</h1>
-        <div class="slideshow-container">
-
-          <div class="mySlides2 fade">
-            <div class="numbertext">1 / 2</div>
-            <img src="resources/filler.jpg" class="news_slide_img"
-              onclick="window.location='https://www.twitch.tv/tadmozeltov';">
-            <div class="text">TadMozelTov</div>
-            <div class="highlight_content">
-              <ul>
-                <li>Best Moderator</li>
-                <li>Very Knowledgeable</li>
-                <li>Super Friendly in chat</li>
-                <li>Great Friend</li>
-              </ul>
+          <p>C#</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:85%">
+              <div class="w3-center w3-text-white">85%</div>
             </div>
           </div>
-          <div class="mySlides2 fade">
-            <div class="numbertext">2 / 2</div>
-            <img src="resources/filler.jpg" class="news_slide_img">
-            <div class="text">Gladitors of Alnor</div>
+          <p>Database Management</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:85%">
+              <div class="w3-center w3-text-white">85%</div>
+            </div>
           </div>
+          <p>Applied AI</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
+              <div class="w3-center w3-text-white">80%</div>
+            </div>
+          </div>
+          <p>3D Modeling</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:70%">
+              <div class="w3-center w3-text-white">70%</div>
+            </div>
+          </div>
+          <p>.Net Core</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:65%">
+              <div class="w3-center w3-text-white">65%</div>
+            </div>
+          </div>
+          <p>Remote Server Management</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">
+              <div class="w3-center w3-text-white">50%</div>
+            </div>
+          </div>
+          <br>
 
-          <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides2(1)">&#10095;</a>
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+          <p>English</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
+          </div>
+          <br>
+        </div>
+      </div><br>
 
-        </div>
-        <br>
-        <div style="text-align:center">
-          <span class="dot2" onclick="currentSlide2(1)"></span>
-          <span class="dot2" onclick="currentSlide2(2)"></span>
-        </div>
-      </div>
+    <!-- End Left Column -->
     </div>
 
-    <div id="page_footer">
-      <div id="footer_link_bar">
-        <button onclick="window.location='https://discordapp.com/invite/gRzWMU8';">Discord</button>
-        <button
-          onclick="window.location='https://open.spotify.com/user/1220369958?si=339d4aUvSxiLftn5o7R_7w';">Spotify</button>
-        <button onclick="window.location='https://github.com/IanSwire';">Github</button>
-        <button onclick="window.location='https://www.twitch.tv/ianswire';">Twitch</button>
-        <button onclick="window.location='https://www.youtube.com/channel/UCqqni2QJ5_DLNKFfAGgo6_Q';">Youtube</button>
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Graduate Research Assitant / Florida Institute of Technology</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2020 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
+          <p>Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Research Assistant / Florida Institute of Technology</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2018 - Aug 2020</h6>
+          <p>Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+          <hr>
+        </div>
       </div>
-      <div id="footer_contact_bar">
-        <p>If something seems to be wrong, please contact support@ianswire.com</p>
+
+      <div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Florida Institue of Technology</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2020 - Present</h6>
+          <p>Master Degree</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Florida Insitute of Technology</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2016 - 2020</h6>
+          <p>Bachelor Degree</p><br>
+        </div>
       </div>
+
+    <!-- End Right Column -->
     </div>
+    
+  <!-- End Grid -->
   </div>
+  
+  <!-- End Page Container -->
+</div>
 
-  <div id="right_content">
+<footer class="w3-container w3-teal w3-center w3-margin-top">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a> and <a href="https://pages.github.com/">Github</a></p>
+</footer>
 
-  </div>
-
-  <script src="https://embed.twitch.tv/embed/v1.js"></script>
-  <script type="text/javascript">
-    var embed = new Twitch.Embed("channel_video", {
-      width: 854,
-      height: 480,
-      channel: "ianswire",
-      layout: "video",
-      autoplay: true
-    });
-    var h_embed = new Twitch.Embed("channel_video", {
-      width: 1,
-      height: 1,
-      channel: "ianswire",
-      layout: "video",
-      autoplay: true
-    });
-
-    embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
-      var player = embed.getPlayer();
-      player.SetVolume(0.5);
-      player.play();
-      var h_player = h_embed.getPlayer();
-      h_player.SetVolume(0.05);
-      h_player.play();
-    });
-  </script>
-  <script>
-    var slideIndex = 1;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    showSlides(1);
-
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      if (n > slides.length) { slideIndex = 1 }
-      if (n < 1) { slideIndex = slides.length }
-
-      for (var i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (var i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-    }
-
-    var slideIndex2 = 1;
-    var slides2 = document.getElementsByClassName("mySlides2");
-    var dots2 = document.getElementsByClassName("dot2");
-    showSlides2(1);
-
-    function plusSlides2(n) {
-      showSlides2(slideIndex2 += n);
-    }
-
-    function currentSlide2(n) {
-      showSlides2(slideIndex2 = n);
-    }
-
-    function showSlides2(n) {
-      if (n > slides2.length) { slideIndex2 = 1 }
-      if (n < 1) { slideIndex2 = slides2.length }
-
-      for (var i = 0; i < slides2.length; i++) {
-        slides2[i].style.display = "none";
-      }
-      for (var i = 0; i < dots2.length; i++) {
-        dots2[i].className = dots2[i].className.replace(" active", "");
-      }
-
-      slides2[slideIndex2 - 1].style.display = "block";
-      dots2[slideIndex2 - 1].className += " active";
-    }
-  </script>
 </body>
-
 </html>
